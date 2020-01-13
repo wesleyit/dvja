@@ -15,7 +15,7 @@ pipeline {
     stage('Check dependencies') {
       steps {
         dependencyCheck additionalArguments: '', odcInstallation: 'Dependency-Check'
-        dependencyCheckPublisher failedTotalCritical: 1, failedTotalHigh: 1, failedTotalLow: 10, failedTotalMedium: 5, pattern: '', unstableTotalCritical: 1, unstableTotalHigh: 1, unstableTotalLow: 10, unstableTotalMedium: 5
+        dependencyCheckPublisher failedTotalCritical: 1000, failedTotalHigh: 1000, failedTotalLow: 1000, failedTotalMedium: 1000, pattern: '', unstableTotalCritical: 500, unstableTotalHigh: 500, unstableTotalLow: 500, unstableTotalMedium: 500
       }
     }
     stage('Publish to S3') {
